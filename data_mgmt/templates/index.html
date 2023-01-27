@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            table, th, td {
+                border:1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th colspan="4">Sensor Data</th> 
+            </tr>
+            <tr>
+                {% for cell in tbl_hdr %}
+                    <th>{{ cell }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in sensor_data %}
+                <tr>
+                    {% for cell in row %}
+                        <td>{{ cell }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
